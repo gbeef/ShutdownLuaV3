@@ -1,5 +1,9 @@
-##How To Compile
+## THIS IS AN UNSTABLE BUILD.
+
+## How To Compile
 - Install LuaRT
 - Compile As A Windows App
-- Add Icon.ico
-- enter
+- Add icon.png
+- Build lua52.dll into the app
+- Compile
+- Have Fun.
