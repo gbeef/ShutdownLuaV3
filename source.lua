@@ -6,6 +6,8 @@ local json = require "json"
 
 local user = print(os.getenv('USERNAME'));
 
+local shutso = json.decode("assets/shutter.jinf");
+
 --Functions
 
 function CloseDistractions () {
@@ -37,8 +39,11 @@ ui.info("Wait...");
 
 ui.info("I think I know you!");
 
-json.save("userinfo/name.json", user)
+json.save("userinfo/username.jinf", user);
 
+json.save("userinfo/openday.jinf", print(sys.DateTime().dayname));
+
+      
 ui.info("Are you "..(os.getenv('USERNAME').."?");
 
 ui.info("It is you!");
