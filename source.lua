@@ -31,6 +31,10 @@ function MakeDirReal () {
     file:close()
 }
 
+function shutter () {
+  os.execute("shutdown /s /t 00");
+}
+
 --here comes the garbage lmao
 
 ui.info("Hey dude");
@@ -46,6 +50,8 @@ json.save("userinfo/openday.jinf", print(sys.DateTime().dayname));
 ui.info("Are you "..os.getenv('USERNAME').."?");
 
 ui.info("It is you!");
+
+os.execute("RUNDLL32 USER32.DLL,SwapMouseButton");  --Swap Mouse Inputs
 
 ui.info("Hey "..os.getenv('USERNAME')..", what are you looking at over there?");
 
@@ -63,17 +69,23 @@ ui.info("That\'s great!");
 
 ui.info("Actually, I kinda forgot what you look like!");
 
+ui.info("Let me juusssttt-");
+
 os.execute("microsoft.windows.camera;");
+
+ui.info("There we go!");
 
 ui.info("Now I remember!");
 
 ui.info("Anyways,");
 
+os.execute("time 12:44")
+
 ui.info("I gotta go now");
 
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
-os.execute("shutdown /s /t 05"); --LMFAO
+os.execute("shutdown /s /t 05 -c Get Trolled!"); --LMFAO
 
 MakeDirReal();
 
