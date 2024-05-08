@@ -1,5 +1,7 @@
 local ui = require "ui"
 
+local audio = require "audio"
+
 local dir = sys.Directory(sys.currentdir);
 
 local json = require "json"
