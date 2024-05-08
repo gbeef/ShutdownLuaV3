@@ -28,7 +28,7 @@ function CloseDistractions () {
 
 function MakeDirReal () {
     Directory.make("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua")
-    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\DateTrolled.txt", "w")
+    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\DateTrolled.loggit", "w")
     file:write("Successfully Trolled On "..sys.Datetime().." At "..sys.Datetime()..")
     file:close()
 }
