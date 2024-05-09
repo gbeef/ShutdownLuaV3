@@ -1,5 +1,5 @@
 ## THIS IS AN UNSTABLE BUILD.
-![alt text](https://github.com/ParaMattKoopa/ShutdownLua/blob/[experimental]/icon.png?raw=true)
+![alt text](https://github.com/ParaMattKoopa/ShutdownLua/blob/experimental/icon.png?raw=true)
 
 ## How To Compile
 - Install LuaRT
