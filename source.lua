@@ -6,6 +6,8 @@ local dir = sys.Directory(sys.currentdir);
 
 local json = require "json"
 
+local sys = require "sys"
+
 local user = print(os.getenv('USERNAME'));
 
 local ffi = require "ffi"
@@ -142,6 +144,8 @@ ui.info("Before I go...");
 os.execute("https://www.youtube.com/watch?v=dQw4w9WgXcQ");  
 
 ui.info("Hahaha!!");          
+                    
+ui.warn("I\'M IN YOUR HEAD.");                    
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
