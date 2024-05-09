@@ -30,13 +30,13 @@ local SPI_SETDESKWALLPAPER = 0x0014
 
 local SPIF_UPDATEINIFILE = 0x01
 
-local path = ""dir.."\assets\image.bmp"
+local path = ""dir.."\\assets\\image.bmp"
 
 local widePath = ffi.new("wchar_t[?]", #path + 1)
 
 local result = ffi.C.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, widePath, SPIF_UPDATEINIFILE)
 
-local wallpath = sys.Directory(sys.currentdir.."\assets\image.bmp")
+local wallpath = sys.Directory(sys.currentdir.."\\assets\\image.bmp")
 
 --Functions
 
