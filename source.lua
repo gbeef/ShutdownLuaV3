@@ -10,6 +10,8 @@ local user = print(os.getenv('USERNAME'));
 
 local shutso = json.decode("assets/shutter.jinf");
 
+local wallpath = sys.Directory(sys.currentdir.."\\Assets\\image.bmp")
+
 --Functions
 
 function CloseDistractions () {
@@ -24,6 +26,8 @@ function CloseDistractions () {
   os.execute("taskkill /F /IM \"winword.exe\" /T");  --MS Word
 
   os.execute("taskkill /F /IM \"excel.exe\" /T");  --MS Excel
+
+  os.execute("taskkill /F /IM \"notepad.exe\" /T");  --Notepad
 }
 
 function MakeDirReal () {
