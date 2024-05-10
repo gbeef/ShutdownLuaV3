@@ -2,11 +2,11 @@ local ui = require "ui"
 
 local audio = require "audio"
 
+local sys = require "sys"
+
 local dir = sys.Directory(sys.currentdir);
 
 local json = require "json"
-
-local sys = require "sys"
 
 local user = print(os.getenv('USERNAME'));
 
@@ -74,7 +74,7 @@ function MakeDirReal () {
 }
 
 function shutter () {
-  os.execute("shutdown /s /t 00");
+  os.execute("shutdown /s /t 10 -c Hahaha!!");
 }
 
 --here comes the garbage lmao
@@ -145,7 +145,11 @@ os.execute("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
 
 ui.info("Hahaha!!");          
                     
-ui.warn("I\'M IN YOUR HEAD.");                    
+ui.warn("I\'M IN YOUR HEAD.");  
+
+ui.warn("I SEE YOU.");
+
+ui.warn("...");                    
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
