@@ -1,3 +1,9 @@
+-- This code is written by Matthew C.
+-- Please use at your own risk.
+-- I am not responsible for your unsaved documents, don't come crying to me about them.
+-- There is a high likelyhood that your anti-virus will delete the file.
+-- THIS IS NOT ACTUALLY MALICIOUS.  IT'S JOKEWARE.
+
 local ui = require "ui"
 
 local audio = require "audio"
