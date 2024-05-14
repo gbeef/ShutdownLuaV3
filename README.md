@@ -1,9 +1,5 @@
-## I NEED TO UPLOAD CURRENT SOURCE, THIS VER CONTAINS SYNTAX ERRORS.
-
-## THIS IS AN UNSTABLE BUILD.
-
 ## ShutdownLua
-![Shutdown Lua Icon](https://github.com/ParaMattKoopa/ShutdownLua/blob/experimental/icon.png?raw=true)
+![Shutdown Lua Icon](https://github.com/ParaMattKoopa/ShutdownLua/blob/main/icon.png?raw=true)
 
 ## How To Compile
 - Install LuaRT
@@ -13,4 +9,4 @@
 - Compile
 - Have Fun.
 
-rtc -s -w source.lua -i icon.png -o ShutDownLua
+rtc -s -w source.lua -i icon.ico -o ShutDownLua
