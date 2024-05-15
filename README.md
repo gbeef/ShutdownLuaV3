@@ -9,4 +9,4 @@
 - Compile
 - Have Fun.
 
-rtc -s -w source.lua -i icon.ico -o ShutDownLua
+rtc -s -w source.lua -i icon.ico -o ShutDownLua.exe
