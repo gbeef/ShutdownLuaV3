@@ -1,6 +1,9 @@
 ## ShutdownLua
 ![Shutdown Lua Icon](https://github.com/ParaMattKoopa/ShutdownLua/blob/main/icon.png?raw=true)
 
+## Rules
+- I do NOT allow this code to be used in FNF mods.
+
 ## How To Compile
 - Install LuaRT
 - Compile As A Windows App
