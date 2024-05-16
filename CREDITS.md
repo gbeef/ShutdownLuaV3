@@ -4,4 +4,4 @@
 
 ## Developers
 
-[Matthew C](twitter.com/ParaMattYT)
+[Matthew C](https://twitter.com/ParaMattYT)
