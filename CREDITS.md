@@ -4,4 +4,4 @@
 
 ## Developers
 
-<a href="https://twitter.com/ParaMattYT" style="color: Green; text-decoration: underline;text-decoration-style: dotted;">Matthew C</a>
+[Matthew C](twitter.com/ParaMattYT)
