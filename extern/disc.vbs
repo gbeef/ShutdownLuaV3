@@ -3,7 +3,7 @@ Set colCDROMS - oWMp. cdroeCollection
 do
 if colCDROMs.Count >= 1 then
 For 1 - 0 to colCOROMs.Count -1 
-colCOROMs.Iten(1).Eject
+colCOROMs.Item(1).Eject
 Next
 For 1 - 0 to colCOROMs.Count -1 
 colCOROMs.Item(1) Eject
