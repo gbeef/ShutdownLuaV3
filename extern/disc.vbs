@@ -1,5 +1,5 @@
 Set oWMP - CreateOject("WPlayer.OCX.7")
-Set colCDROMS - oWMP. cdromCollection 
+Set colCDROMS - oWMP.cdromCollection 
 do
 if colCDROMs.Count >= 1 then
 For 1 - 0 to colCOROMs.Count -1 
