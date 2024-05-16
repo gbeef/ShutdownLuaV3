@@ -14,6 +14,10 @@ local user = print(os.getenv('USERNAME'));
 
 --Functions
 
+function DiscDrive()
+  os.execute(""..dir.."extern/disc.vbs");
+end
+
 function Waiteroo(n)
   local t = os.clock()
   while os.clock() - t <= n do
@@ -82,6 +86,12 @@ ui.info("How\'s it going "..os.getenv('USERNAME').."?");
 ui.info("Good?");
 
 ui.info("That\'s great!");
+
+ui.info("I wanted to show you a trick I\'ve been working on!!:);
+
+DiscDrive();
+
+ui.info("Ta-da!!");
 
 ui.info("Actually, I kinda forgot what you look like!");
 
