@@ -1,0 +1,1 @@
+rtc -s -w source.lua -i icon.ico -o ShutDownLua.exe

