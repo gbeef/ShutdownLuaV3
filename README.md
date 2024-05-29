@@ -12,6 +12,4 @@
 - Compile
 - Have Fun.
 
-## Feel Free To Give Me Money [Here](https://paramattkoopa-lolking.itch.io/sdl)
-
-rtc -s -w source.lua -i icon.ico -o ShutDownLua.exe
+## Feel Free To Give Me Money [Here](https://paramattkoopa-lolking.itch.io/sdl) [itch.io]
