@@ -14,6 +14,4 @@
 
 ## Feel Free To Give Me Money Here:
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P3PIBZX)
-
 [itch.io](https://paramattkoopa-lolking.itch.io/sdl)
